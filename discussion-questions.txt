@@ -1,0 +1,59 @@
+Part 1: Discussion Questions
+
+
+Recursion
+
+1.  Recursion is the repetition of an action using different values.
+2.  Without a base case, the recursive function will never have a stopping point,
+    and will continue calling itself forever (or until the console breaks the
+    recursion after a certain length).
+
+
+Graphs
+
+1.  A graph is a collection of nodes that are related to each other by edges.
+2.  In a graph, there is no root, and no hierarchy of nodes. What's being shown
+    by a graph is not the importance of each node, but the relationships between
+    nodes.
+3.  A map of bus routes would be well-modeled with a graph. Each node would represent
+    a bus stop, and each edge would represent a bus route that connects those stops.
+
+
+Sorting
+
+1.  The Bubble Sort algorithm compares the first two items in a list, determines
+    the one with higher value, and places it in the latter position. Then, that value
+    is compared to the following value (index 2) and the items are swapped if
+    necessary. The algorithm runs through the list of n items (n-1) times in total.
+2.  The Merge Sort algorithm works by recursion. A list is split in half, and again
+    in half, repeating until all elements are contained in lists of one. This splitting
+    occurs in a recursive function that calls itself until this condition is met.
+    At this point, the list is built back up in the same way. As the recursive functions
+    close back up, they compare two split lists (that are now sorted), form a new
+    sorted list, and return that. Eventually, one sorted list is returned from the final
+    recursive call.
+3.  The Quick Sort algorithm works by choosing a 'pivot' element in the list, around
+    which all items will be reoriented. After choosing the pivot, two iterating
+    variables are used - one to act as the pivot divider, keeping lower- and higher-than
+    values on opposite sides, and the other to keep track of the current position in the
+    list. As the algorithm loops through the items, it places them on one side or the
+    other of the divider variable. After finishing, the pivot is moved to the divider
+    index.
+
+
+Performance of Different Data Structures
+
+Data Structure              Index   Search  Add-R   Add-L   Pop-L   Pop-R
+Python List (Array)         O(1)    O(n)    O(1)    O(n)    O(n)    O(1)
+Linked List                 O(n)    O(n)    O(1)    O(1)    O(1)    O(n)
+Doubly-Linked List          O(n)    O(n)    O(1)    O(1)    O(1)    O(1)
+Queue (as Array)            X       X       O(1)    X       O(1)    X  
+Queue (as LL/DLL)           X       X       O(1)    X       O(1)    X  
+Stack (as Array/LL/DLL)     X       X       O(1)    X       X       O(1)
+Deque (as DLL)              X       X       O(1)    O(1)    O(1)    O(1)
+
+Data Structure              Get     Add     Delete  Iterate Memory
+Dictionary (Hash Map)       O(1)    O(1)    O(1)    O(n)    **
+Set (Hash Map)              O(1)    O(1)    O(1)    O(1)    **
+Binary Search Tree          O(logn) O(logn) O(logn) O(logn) *
+Tree                        O(n)    O(n)    O(n)    O(n)    **
