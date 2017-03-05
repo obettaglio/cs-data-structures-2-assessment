@@ -99,7 +99,6 @@ def num_nodes(tree):
         >>> num_nodes(one)
         6
     """
-
     if tree.children == []:
         return 1
 

@@ -1,5 +1,6 @@
 #Sorting
 
+
 def bubble_sort(lst):
     """Returns a sorted list using a optimized bubble sort algorithm
     i.e. using a variable to track if there hasn't been a swap.
@@ -7,7 +8,12 @@ def bubble_sort(lst):
         >>> bubble_sort([3, 5, 7, 2, 4, 1])
         [1, 2, 3, 4, 5, 7]
     """
-    pass
+    for i in range(len(lst) - 1):
+        for j in range(len(lst) - 1 - i):   # optimization
+            if lst[j] > lst[j + 1]:                         # had to look up this
+                lst[j], lst[j + 1] = lst[j + 1], lst[j]     # << index swapping method
+
+    return lst
 
 
 def merge_lists(list1, list2):
@@ -17,11 +23,25 @@ def merge_lists(list1, list2):
     >>> merge_lists([1, 3, 9], [4, 7, 11])
     [1, 3, 4, 7, 9, 11]
     """
+    new_list = []
 
-    pass
+    while len(list1) > 0 or len(list2) > 0:
+        if list1 == []:
+            new_list.extend(list2)
+            list2 = []
+        elif list2 == []:
+            new_list.extend(list1)
+            list1 = []
+        elif list1[0] > list2[0]:
+            new_list.append(list2.pop(0))
+        else:
+            new_list.append(list1.pop(0))
+
+    return new_list
 
 
 ##########ADVANCED##########
+
 def merge_sort(lst):
     """
     Given a list, returns a sorted version of that list.
@@ -36,8 +56,6 @@ def merge_sort(lst):
     [0, 1, 2, 3, 6, 9]
     """
     pass
-
-
 
 
 #####################################################################
